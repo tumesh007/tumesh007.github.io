@@ -1,0 +1,207 @@
+{
+  "profile": {
+    "username": "tumesh007",
+    "name": "Tumesh",
+    "tagline": "Software Engineer • 3D Printing & CAD Maker • Embedded Systems",
+    "bio": "Building high-performance web applications, parametric 3D print generators, and embedded IoT systems.",
+    "githubUrl": "https://github.com/tumesh007",
+    "websiteUrl": "https://tumesh007.github.io/"
+  },
+  "settings": {
+    "cacheTtlMinutes": 30,
+    "showStarCounts": true,
+    "showForkCounts": true,
+    "defaultSort": "updated",
+    "defaultTheme": "dark"
+  },
+  "hiddenRepos": [
+    "tumesh007.github.io",
+    "tumesh007",
+    "BankersToolkit"
+  ],
+  "featured": [
+    "phone-wall-clock-enclosure-generator",
+    "guava-home",
+    "Shaving-Bowl"
+  ],
+  "categories": [
+    { "id": "all", "label": "All Projects", "icon": "layers" },
+    { "id": "featured", "label": "Featured", "icon": "sparkles" },
+    { "id": "web-apps", "label": "Web Apps", "icon": "globe" },
+    { "id": "3d-printing", "label": "3D Printing & CAD", "icon": "box" },
+    { "id": "iot", "label": "ESP32 & IoT", "icon": "cpu" },
+    { "id": "android-tools", "label": "Android & Tools", "icon": "smartphone" }
+  ],
+  "repoOverrides": {
+    "phone-wall-clock-enclosure-generator": {
+      "title": "Phone Wall Clock Enclosure Generator",
+      "description": "Parametric OpenSCAD enclosure generator that upcycles old Android smartphones into wall-mounted digital clocks with hidden wire routing and snap-fit bezel clips.",
+      "category": "3d-printing",
+      "categoryLabel": "3D Printing & Web App",
+      "tags": ["OpenSCAD", "3D Printing", "Parametric", "Web App"],
+      "homepage": "https://tumesh007.github.io/phone-wall-clock-enclosure-generator/"
+    },
+    "guava-home": {
+      "title": "GuavaHome — ESP32 Smart IoT Hub",
+      "description": "An ESP32-based Smart Home controller with embedded web dashboard, sensor telemetry, Home Assistant MQTT integration, and multi-channel relay controls.",
+      "category": "iot",
+      "categoryLabel": "ESP32 & IoT",
+      "tags": ["ESP32", "C++", "IoT", "Home Assistant", "MQTT"]
+    },
+    "Shaving-Bowl": {
+      "title": "Parametric Shaving Lathering Bowl",
+      "description": "Ergonomic 3D-printable shaving lathering bowl designed in OpenSCAD with textured interior micro-ridges for rapid, dense lather generation.",
+      "category": "3d-printing",
+      "categoryLabel": "3D Printing / OpenSCAD",
+      "tags": ["OpenSCAD", "3D Printing", "Parametric", "STL"],
+      "homepage": "https://tumesh007.github.io/Shaving-Bowl/",
+      "downloads": [
+        {
+          "label": "Download STL (v14.2)",
+          "url": "https://github.com/tumesh007/Shaving-Bowl/releases/download/v14.2/Tumeshs_Shaving_Bowl_v14_2_STANDARD_bin.stl",
+          "type": "stl"
+        }
+      ]
+    },
+    "Longbook-Merger": {
+      "title": "LongBook Merger Studio",
+      "description": "100% client-side A4 landscape PDF generator for CBSL & Finacle banking reports. Features Courier font scaling, multi-page Table of Contents, and native ZIP archive extraction.",
+      "category": "web-apps",
+      "categoryLabel": "Web App & Tool",
+      "tags": ["JavaScript", "Banking Tools", "PDF Generation", "Client-Side"],
+      "homepage": "https://tumesh007.github.io/Longbook-Merger/"
+    },
+    "Pdf-Redactor": {
+      "title": "PDF Redactor Studio",
+      "description": "Client-side PDF redaction studio with stream-level watermark cleaner. Permanently removes employee ID watermarks, scrubs metadata, and provides 1-click banking presets.",
+      "category": "web-apps",
+      "categoryLabel": "Web App & Security",
+      "tags": ["JavaScript", "PDF Redaction", "Security", "Client-Side"],
+      "homepage": "https://tumesh007.github.io/Pdf-Redactor/"
+    },
+    "arduino-multifunction-shield-case": {
+      "title": "Arduino Multi-Function Shield Simulator & Case",
+      "description": "Interactive browser hardware simulator for the HW-262 shield with 24 modes, educational games (Simon Says, Reaction Timer, Chess Clock), Web Audio synthesis, and parametric 3D case.",
+      "category": "iot",
+      "categoryLabel": "ESP32 & IoT / Simulator",
+      "tags": ["OpenSCAD", "Simulator", "Arduino", "Web Audio"],
+      "homepage": "https://tumesh007.github.io/arduino-multifunction-shield-case/"
+    },
+    "Bankers-Toolkit": {
+      "title": "Banker's Toolkit Android App",
+      "description": "Comprehensive Android utility suite for branch operations, including recovery tracking, interest calculators, account check-digit validation, and legal notice tools.",
+      "category": "android-tools",
+      "categoryLabel": "Android & Banking",
+      "tags": ["Android", "Kotlin", "Banking", "Mobile"],
+      "downloads": [
+        {
+          "label": "Download APK (v2.2.0)",
+          "url": "https://github.com/tumesh007/Bankers-Toolkit/releases/download/v2.2.0/BankersToolkit-v2.2.apk",
+          "type": "apk"
+        }
+      ]
+    },
+    "moon-lamp-designer": {
+      "title": "Moon Lamp 3D Lithophane Designer",
+      "description": "Interactive 3D tool generating printable lithophane spherical globes and custom night-light lamp enclosures.",
+      "category": "3d-printing",
+      "categoryLabel": "3D Printing & CAD",
+      "tags": ["TypeScript", "3D Printing", "Lithophane", "WebGL"],
+      "homepage": "https://tumesh007.github.io/moon-lamp-designer/"
+    },
+    "metric-fastener-workbench": {
+      "title": "Metric Fastener Sizing Workbench",
+      "description": "Parametric 3D printable test gauge and sizing workbench for M3, M4, and M5 screws, nuts, and heat-set threaded inserts.",
+      "category": "3d-printing",
+      "categoryLabel": "3D Printing & CAD",
+      "tags": ["3D Printing", "Hardware", "Parametric", "OpenSCAD"],
+      "homepage": "https://tumesh007.github.io/metric-fastener-workbench/"
+    },
+    "boAt-PB331-Galaxy-S25-Dock": {
+      "title": "boAt PB331 Powerbank & Galaxy S25 Dock",
+      "description": "Precision-engineered parametric 3D printable charging dock accommodating the boAt PB331 battery pack with Samsung Galaxy S25 alignment.",
+      "category": "3d-printing",
+      "categoryLabel": "3D Printing & CAD",
+      "tags": ["OpenSCAD", "3D Printing", "CAD", "Dock"],
+      "homepage": "https://tumesh007.github.io/boAt-PB331-Galaxy-S25-Dock/"
+    },
+    "3d-desk-name-plate": {
+      "title": "3D Desk Nameplate Generator",
+      "description": "Parametric dual-color desktop nameplate generator with customizable typography, logos, and adjustable display stand angles.",
+      "category": "3d-printing",
+      "categoryLabel": "3D Printing & CAD",
+      "tags": ["3D Printing", "OpenSCAD", "Parametric"],
+      "homepage": "https://tumesh007.github.io/3d-desk-name-plate/"
+    },
+    "piggy-bank-customizer": {
+      "title": "Customizable Piggy Bank",
+      "description": "Parametric 3D printable coin bank featuring a bayonet twist-lock bottom cap and embossed custom name personalization.",
+      "category": "3d-printing",
+      "categoryLabel": "3D Printing & CAD",
+      "tags": ["3D Printing", "Parametric", "OpenSCAD"],
+      "homepage": "https://tumesh007.github.io/piggy-bank-customizer/"
+    },
+    "safety-razor-holder-customizer": {
+      "title": "Safety Razor & Blade Stand",
+      "description": "Customizable hygienic bathroom caddy and drying stand for traditional double-edge safety razors with blade pack slot.",
+      "category": "3d-printing",
+      "categoryLabel": "3D Printing & CAD",
+      "tags": ["3D Printing", "Parametric", "OpenSCAD"],
+      "homepage": "https://tumesh007.github.io/safety-razor-holder-customizer/"
+    },
+    "parametric-name-keyring": {
+      "title": "Parametric Name Keyring",
+      "description": "Fast-printing personalized keychain with reinforced split-ring eyelet and chamfered dual-color lettering.",
+      "category": "3d-printing",
+      "categoryLabel": "3D Printing & CAD",
+      "tags": ["3D Printing", "Parametric", "OpenSCAD"],
+      "homepage": "https://tumesh007.github.io/parametric-name-keyring/"
+    },
+    "cufflinks-customizer": {
+      "title": "Monogrammed Cufflinks Customizer",
+      "description": "Parametric 3D printable formal cufflinks featuring custom monogram lettering and smooth toggle posts.",
+      "category": "3d-printing",
+      "categoryLabel": "3D Printing & CAD",
+      "tags": ["3D Printing", "CAD", "Fashion"],
+      "homepage": "https://tumesh007.github.io/cufflinks-customizer/"
+    },
+    "IdCardPrinter": {
+      "title": "ID Card Batch Photo & Alignment Tool",
+      "description": "Desktop utility for batch cropping, color balancing, and alignment grid printing of corporate ID cards.",
+      "category": "android-tools",
+      "categoryLabel": "Tools & Imaging",
+      "tags": ["Python", "Automation", "Imaging"],
+      "homepage": "https://tumesh007.github.io/IdCardPrinter/"
+    },
+    "toothbrush-clinic": {
+      "title": "Toothbrush & Oral Care Organizer",
+      "description": "Hygienic wall-mounted modular organizer for electric toothbrush handles, charging pucks, and replacement heads.",
+      "category": "3d-printing",
+      "categoryLabel": "3D Printing & CAD",
+      "tags": ["TypeScript", "3D Printing", "Design"],
+      "homepage": "https://tumesh007.github.io/toothbrush-clinic/"
+    },
+    "plate-forge": {
+      "title": "Plate Forge — Custom Plaque Designer",
+      "description": "In-browser CAD generator for creating embossed and debossed equipment tags, warning plates, and serial badges.",
+      "category": "3d-printing",
+      "categoryLabel": "3D Printing & CAD",
+      "tags": ["JavaScript", "CAD", "Web App"],
+      "homepage": "https://tumesh007.github.io/plate-forge/"
+    },
+    "IdCardPrinterAndroid": {
+      "title": "ID Card Printer Android Companion",
+      "description": "Lightweight Android companion application for mobile camera capture and direct wireless card printing.",
+      "category": "android-tools",
+      "categoryLabel": "Android & Tools",
+      "tags": ["Android", "Kotlin", "Printing"]
+    },
+    "Open-Mic": {
+      "title": "Open-Mic Wireless Audio Bridge",
+      "description": "Low-latency wireless audio streaming bridge connecting microphone inputs over WiFi/UDP network streams.",
+      "category": "iot",
+      "categoryLabel": "ESP32 & IoT",
+      "tags": ["Audio", "WiFi", "IoT", "Networking"]
+    }
+  }
+}

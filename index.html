@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tumesh007 // Engineering Project Hub &amp; Portfolio</title>
+  <meta name="description" content="Portfolio and project hub for tumesh007: parametric 3D print generators, client-side web apps, and embedded IoT systems." />
+  <meta name="author" content="Tumesh" />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tumesh007.github.io/" />
+  <meta property="og:title" content="tumesh007 // Engineering Project Hub" />
+  <meta property="og:description" content="Parametric 3D print tools, client-side web utilities, and embedded IoT systems." />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="https://tumesh007.github.io/" class="brand-wrap">
+        <div class="brand-icon">T</div>
+        <div class="brand-title">
+          <span class="brand-handle">tumesh007</span>
+          <span class="brand-divider">/</span>
+          <span class="brand-badge">Hub</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme" title="Toggle Theme">
+          <span id="theme-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </span>
+        </button>
+
+        <!-- GitHub Profile Link -->
+        <a href="https://github.com/tumesh007" target="_blank" rel="noopener noreferrer" class="btn-github" title="Visit GitHub Profile">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-content">
+      <div class="hero-header-row">
+        <div class="hero-tag">
+          <span class="pulse-dot"></span>
+          <span>Engineering &amp; Maker Portfolio</span>
+        </div>
+        <h1 class="hero-title">
+          Parametric 3D Tools, <span class="gradient-text">Web Apps &amp; IoT</span>
+        </h1>
+        <p class="hero-bio">
+          Hi, I'm Tumesh. I engineer parametric 3D print generators, zero-install client-side web tools, and embedded IoT systems with clean engineering and pragmatic usability.
+        </p>
+      </div>
+
+      <!-- Quick Metrics Grid -->
+      <div class="hero-metrics">
+        <div class="metric-card">
+          <span id="metric-total-repos" class="metric-val">-</span>
+          <span class="metric-label">Repositories</span>
+        </div>
+        <div class="metric-card">
+          <span id="metric-web-apps" class="metric-val">-</span>
+          <span class="metric-label">Live Web Apps</span>
+        </div>
+        <div class="metric-card">
+          <span id="metric-cad-models" class="metric-val">-</span>
+          <span class="metric-label">3D / CAD Tools</span>
+        </div>
+        <div class="metric-card">
+          <span id="metric-total-stars" class="metric-val">-</span>
+          <span class="metric-label">GitHub Stars</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search & Filter Toolbar -->
+  <section class="toolbar-section">
+    <div class="container">
+      <div class="search-row">
+        <div class="search-input-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            type="text"
+            id="search-input"
+            class="search-input"
+            placeholder="Search projects by name, description, OpenSCAD, ESP32, tags... (Press '/' to focus)"
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <button id="search-clear-btn" class="search-clear-btn" aria-label="Clear search">✕</button>
+        </div>
+
+        <div class="sort-wrap">
+          <select id="sort-select" class="sort-select" aria-label="Sort repositories">
+            <option value="updated">Recently Updated</option>
+            <option value="stars">Most Stars</option>
+            <option value="name">Alphabetical</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div id="filter-pills-wrap" class="filter-pills-row" style="margin-top: 0.85rem;">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="container">
+    <!-- Featured Projects Section -->
+    <section id="featured-section" class="section-wrap">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>⭐ Featured Projects</span>
+          <span id="featured-count-badge" class="section-badge">-</span>
+        </h2>
+      </div>
+      <div id="featured-grid" class="featured-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+    </section>
+
+    <!-- All Projects Section -->
+    <section id="all-projects-section" class="section-wrap">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>📦 Repositories</span>
+          <span id="all-projects-count-badge" class="section-badge">-</span>
+        </h2>
+      </div>
+      <div id="all-projects-grid" class="project-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+    </section>
+
+    <!-- Empty Search State -->
+    <div id="empty-state" class="empty-state" style="display: none; margin: 3rem 0;">
+      <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        <line x1="8" y1="11" x2="14" y2="11"></line>
+      </svg>
+      <h3 class="empty-title">No matching projects found</h3>
+      <p class="empty-desc">Try searching for other terms or reset your filters to see all available repositories.</p>
+      <button id="btn-reset-filters" class="btn-reset">Reset Filters</button>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-top-row">
+        <div class="sync-status-wrap">
+          <span id="sync-dot" class="sync-dot"></span>
+          <span id="sync-status-text">Checking GitHub sync...</span>
+          <span id="cache-ttl-text" style="color: var(--text-muted); font-size: 0.75rem;"></span>
+        </div>
+
+        <button id="btn-refresh-data" class="btn-refresh" title="Force fresh sync from GitHub API">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:13px; height:13px;">
+            <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+          </svg>
+          <span>Refresh Data</span>
+        </button>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>
+          <span>&copy; 2026 Tumesh (<a href="https://github.com/tumesh007" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">@tumesh007</a>)</span>
+          <span style="margin: 0 0.5rem; opacity: 0.4;">•</span>
+          <span>Zero-Build Static Architecture • Hosted on GitHub Pages</span>
+        </div>
+
+        <div class="footer-links">
+          <a href="https://github.com/tumesh007?tab=repositories" target="_blank" rel="noopener noreferrer">All Repos</a>
+          <a href="https://github.com/tumesh007/tumesh007.github.io" target="_blank" rel="noopener noreferrer">Portfolio Source</a>
+          <a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Back to Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
