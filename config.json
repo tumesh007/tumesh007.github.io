@@ -17,20 +17,22 @@
   "hiddenRepos": [
     "tumesh007.github.io",
     "tumesh007",
-    "BankersToolkit"
+    "Bankers-Toolkit"
   ],
   "featured": [
     "phone-wall-clock-enclosure-generator",
+    "BankersToolkit",
     "guava-home",
     "Shaving-Bowl"
   ],
   "categories": [
     { "id": "all", "label": "All Projects", "icon": "layers" },
     { "id": "featured", "label": "Featured", "icon": "sparkles" },
+    { "id": "apps", "label": "APKs & Apps", "icon": "smartphone" },
     { "id": "web-apps", "label": "Web Apps", "icon": "globe" },
     { "id": "3d-printing", "label": "3D Printing & CAD", "icon": "box" },
     { "id": "iot", "label": "ESP32 & IoT", "icon": "cpu" },
-    { "id": "android-tools", "label": "Android & Tools", "icon": "smartphone" }
+    { "id": "android-tools", "label": "Android & Tools", "icon": "tool" }
   ],
   "repoOverrides": {
     "phone-wall-clock-enclosure-generator": {
@@ -41,12 +43,127 @@
       "tags": ["OpenSCAD", "3D Printing", "Parametric", "Web App"],
       "homepage": "https://tumesh007.github.io/phone-wall-clock-enclosure-generator/"
     },
-    "guava-home": {
-      "title": "GuavaHome — ESP32 Smart IoT Hub",
-      "description": "An ESP32-based Smart Home controller with embedded web dashboard, sensor telemetry, Home Assistant MQTT integration, and multi-channel relay controls.",
+    "BankersToolkit": {
+      "title": "Banker's Toolkit Android & Linux Suite",
+      "description": "Comprehensive banking operations utility suite with financial calculators, account check-digit validation, recovery tracking, and legal notice tools. Available as direct Android APK and Debian desktop package.",
+      "category": "android-tools",
+      "categoryLabel": "Android & Linux Suite",
+      "tags": ["Android", "Kotlin", "Debian", "Linux", "Banking"],
+      "downloads": [
+        {
+          "label": "Download APK (v3.1)",
+          "url": "https://github.com/tumesh007/BankersToolkit/releases/download/v3.1/BankersToolkit-v3-updated.apk",
+          "type": "apk"
+        },
+        {
+          "label": "Download DEB (v1.0)",
+          "url": "https://github.com/tumesh007/BankersToolkit/releases/download/v3.1/bankers-toolkit_1.0.0_amd64.deb",
+          "type": "deb"
+        },
+        {
+          "label": "Linux Tarball",
+          "url": "https://github.com/tumesh007/BankersToolkit/releases/download/v3.1/bankers-toolkit-linux-x64.tar.gz",
+          "type": "linux"
+        }
+      ]
+    },
+    "Open-Mic": {
+      "title": "Open-Mic Wireless Audio Bridge",
+      "description": "Ultra-low-latency wireless microphone audio bridge streaming sound over local WiFi network with Android companion app and Debian desktop package.",
       "category": "iot",
-      "categoryLabel": "ESP32 & IoT",
-      "tags": ["ESP32", "C++", "IoT", "Home Assistant", "MQTT"]
+      "categoryLabel": "Audio & IoT",
+      "tags": ["Android", "Debian", "Audio", "WiFi", "IoT"],
+      "downloads": [
+        {
+          "label": "Download APK (v3.5.1)",
+          "url": "https://github.com/tumesh007/Open-Mic/releases/download/v3.5/openmic-bridge-android-v3.5.1.apk",
+          "type": "apk"
+        },
+        {
+          "label": "Download DEB (v3.5)",
+          "url": "https://github.com/tumesh007/Open-Mic/releases/download/v3.5/openmic-bridge-web_3.5_all.deb",
+          "type": "deb"
+        }
+      ]
+    },
+    "Pdf-Redactor": {
+      "title": "PDF Redactor Studio",
+      "description": "Client-side PDF redaction studio with stream-level watermark cleaner. Permanently removes employee ID watermarks, scrubs metadata, and provides 1-click banking presets. Available as Web App and Android APK.",
+      "category": "web-apps",
+      "categoryLabel": "Web App & Security",
+      "tags": ["JavaScript", "Android", "PDF Redaction", "Security", "Client-Side"],
+      "homepage": "https://tumesh007.github.io/Pdf-Redactor/",
+      "downloads": [
+        {
+          "label": "Download APK (v1.0)",
+          "url": "https://github.com/tumesh007/Pdf-Redactor/releases/download/v1.0.0/PDFRedactor-debug.apk",
+          "type": "apk"
+        },
+        {
+          "label": "Offline ZIP",
+          "url": "https://github.com/tumesh007/Pdf-Redactor/releases/download/v1.0.0/Pdf-Redactor.zip",
+          "type": "zip"
+        }
+      ]
+    },
+    "toothbrush-clinic": {
+      "title": "Toothbrush Clinic & Companion App",
+      "description": "Hygienic wall-mounted modular organizer for electric toothbrush handles and replacement heads, paired with an Android brushing companion app.",
+      "category": "3d-printing",
+      "categoryLabel": "3D Printing & Android",
+      "tags": ["TypeScript", "Android", "3D Printing", "Design"],
+      "homepage": "https://tumesh007.github.io/toothbrush-clinic/",
+      "downloads": [
+        {
+          "label": "Download APK (v2.0)",
+          "url": "https://github.com/tumesh007/toothbrush-clinic/releases/download/v2.0.0/toothbrush-clinic-release-v2.apk",
+          "type": "apk"
+        }
+      ]
+    },
+    "IdCardPrinterAndroid": {
+      "title": "ID Card Printer Android Companion",
+      "description": "Lightweight Android companion application for mobile camera capture, alignment cropping, and direct wireless card printing.",
+      "category": "android-tools",
+      "categoryLabel": "Android App",
+      "tags": ["Android", "Kotlin", "Printing", "Mobile"],
+      "downloads": [
+        {
+          "label": "Download APK (v1.0.3)",
+          "url": "https://github.com/tumesh007/IdCardPrinterAndroid/releases/download/v1.0.3/app-debug.apk",
+          "type": "apk"
+        }
+      ]
+    },
+    "IdCardPrinter": {
+      "title": "ID Card Batch Photo & Alignment Tool",
+      "description": "Desktop utility for batch cropping, color balancing, and alignment grid printing of corporate ID cards. Standalone Linux binary available.",
+      "category": "android-tools",
+      "categoryLabel": "Tools & Imaging",
+      "tags": ["Python", "Linux", "Automation", "Imaging"],
+      "homepage": "https://tumesh007.github.io/IdCardPrinter/",
+      "downloads": [
+        {
+          "label": "Download Linux App",
+          "url": "https://github.com/tumesh007/IdCardPrinter/releases/download/v1.0.3/id-card-printer",
+          "type": "linux"
+        }
+      ]
+    },
+    "Longbook-Merger": {
+      "title": "LongBook Merger Studio",
+      "description": "100% client-side A4 landscape PDF generator for CBSL & Finacle banking reports. Features Courier font scaling, multi-page Table of Contents, native ZIP archive extraction, and Linux standalone app.",
+      "category": "web-apps",
+      "categoryLabel": "Web App & Tool",
+      "tags": ["JavaScript", "Linux", "Banking Tools", "PDF Generation", "Client-Side"],
+      "homepage": "https://tumesh007.github.io/Longbook-Merger/",
+      "downloads": [
+        {
+          "label": "Download Linux App (v1.1)",
+          "url": "https://github.com/tumesh007/Longbook-Merger/releases/download/v1.1.0/LongBookMerger-v1.1",
+          "type": "linux"
+        }
+      ]
     },
     "Shaving-Bowl": {
       "title": "Parametric Shaving Lathering Bowl",
@@ -63,21 +180,27 @@
         }
       ]
     },
-    "Longbook-Merger": {
-      "title": "LongBook Merger Studio",
-      "description": "100% client-side A4 landscape PDF generator for CBSL & Finacle banking reports. Features Courier font scaling, multi-page Table of Contents, and native ZIP archive extraction.",
-      "category": "web-apps",
-      "categoryLabel": "Web App & Tool",
-      "tags": ["JavaScript", "Banking Tools", "PDF Generation", "Client-Side"],
-      "homepage": "https://tumesh007.github.io/Longbook-Merger/"
+    "boAt-PB331-Galaxy-S25-Dock": {
+      "title": "boAt PB331 Powerbank & Galaxy S25 Dock",
+      "description": "Precision-engineered parametric 3D printable charging dock accommodating the boAt PB331 battery pack with Samsung Galaxy S25 alignment.",
+      "category": "3d-printing",
+      "categoryLabel": "3D Printing & CAD",
+      "tags": ["OpenSCAD", "3D Printing", "CAD", "Dock"],
+      "homepage": "https://tumesh007.github.io/boAt-PB331-Galaxy-S25-Dock/",
+      "downloads": [
+        {
+          "label": "Download STL (v1.2)",
+          "url": "https://github.com/tumesh007/boAt-PB331-Galaxy-S25-Dock/releases/download/v1.2.0/boAt_PB331_Galaxy_S25_Dock.stl",
+          "type": "stl"
+        }
+      ]
     },
-    "Pdf-Redactor": {
-      "title": "PDF Redactor Studio",
-      "description": "Client-side PDF redaction studio with stream-level watermark cleaner. Permanently removes employee ID watermarks, scrubs metadata, and provides 1-click banking presets.",
-      "category": "web-apps",
-      "categoryLabel": "Web App & Security",
-      "tags": ["JavaScript", "PDF Redaction", "Security", "Client-Side"],
-      "homepage": "https://tumesh007.github.io/Pdf-Redactor/"
+    "guava-home": {
+      "title": "GuavaHome — ESP32 Smart IoT Hub",
+      "description": "An ESP32-based Smart Home controller with embedded web dashboard, sensor telemetry, Home Assistant MQTT integration, and multi-channel relay controls.",
+      "category": "iot",
+      "categoryLabel": "ESP32 & IoT",
+      "tags": ["ESP32", "C++", "IoT", "Home Assistant", "MQTT"]
     },
     "arduino-multifunction-shield-case": {
       "title": "Arduino Multi-Function Shield Simulator & Case",
@@ -86,20 +209,6 @@
       "categoryLabel": "ESP32 & IoT / Simulator",
       "tags": ["OpenSCAD", "Simulator", "Arduino", "Web Audio"],
       "homepage": "https://tumesh007.github.io/arduino-multifunction-shield-case/"
-    },
-    "Bankers-Toolkit": {
-      "title": "Banker's Toolkit Android App",
-      "description": "Comprehensive Android utility suite for branch operations, including recovery tracking, interest calculators, account check-digit validation, and legal notice tools.",
-      "category": "android-tools",
-      "categoryLabel": "Android & Banking",
-      "tags": ["Android", "Kotlin", "Banking", "Mobile"],
-      "downloads": [
-        {
-          "label": "Download APK (v2.2.0)",
-          "url": "https://github.com/tumesh007/Bankers-Toolkit/releases/download/v2.2.0/BankersToolkit-v2.2.apk",
-          "type": "apk"
-        }
-      ]
     },
     "moon-lamp-designer": {
       "title": "Moon Lamp 3D Lithophane Designer",
@@ -116,14 +225,6 @@
       "categoryLabel": "3D Printing & CAD",
       "tags": ["3D Printing", "Hardware", "Parametric", "OpenSCAD"],
       "homepage": "https://tumesh007.github.io/metric-fastener-workbench/"
-    },
-    "boAt-PB331-Galaxy-S25-Dock": {
-      "title": "boAt PB331 Powerbank & Galaxy S25 Dock",
-      "description": "Precision-engineered parametric 3D printable charging dock accommodating the boAt PB331 battery pack with Samsung Galaxy S25 alignment.",
-      "category": "3d-printing",
-      "categoryLabel": "3D Printing & CAD",
-      "tags": ["OpenSCAD", "3D Printing", "CAD", "Dock"],
-      "homepage": "https://tumesh007.github.io/boAt-PB331-Galaxy-S25-Dock/"
     },
     "3d-desk-name-plate": {
       "title": "3D Desk Nameplate Generator",
@@ -165,22 +266,6 @@
       "tags": ["3D Printing", "CAD", "Fashion"],
       "homepage": "https://tumesh007.github.io/cufflinks-customizer/"
     },
-    "IdCardPrinter": {
-      "title": "ID Card Batch Photo & Alignment Tool",
-      "description": "Desktop utility for batch cropping, color balancing, and alignment grid printing of corporate ID cards.",
-      "category": "android-tools",
-      "categoryLabel": "Tools & Imaging",
-      "tags": ["Python", "Automation", "Imaging"],
-      "homepage": "https://tumesh007.github.io/IdCardPrinter/"
-    },
-    "toothbrush-clinic": {
-      "title": "Toothbrush & Oral Care Organizer",
-      "description": "Hygienic wall-mounted modular organizer for electric toothbrush handles, charging pucks, and replacement heads.",
-      "category": "3d-printing",
-      "categoryLabel": "3D Printing & CAD",
-      "tags": ["TypeScript", "3D Printing", "Design"],
-      "homepage": "https://tumesh007.github.io/toothbrush-clinic/"
-    },
     "plate-forge": {
       "title": "Plate Forge — Custom Plaque Designer",
       "description": "In-browser CAD generator for creating embossed and debossed equipment tags, warning plates, and serial badges.",
@@ -188,20 +273,6 @@
       "categoryLabel": "3D Printing & CAD",
       "tags": ["JavaScript", "CAD", "Web App"],
       "homepage": "https://tumesh007.github.io/plate-forge/"
-    },
-    "IdCardPrinterAndroid": {
-      "title": "ID Card Printer Android Companion",
-      "description": "Lightweight Android companion application for mobile camera capture and direct wireless card printing.",
-      "category": "android-tools",
-      "categoryLabel": "Android & Tools",
-      "tags": ["Android", "Kotlin", "Printing"]
-    },
-    "Open-Mic": {
-      "title": "Open-Mic Wireless Audio Bridge",
-      "description": "Low-latency wireless audio streaming bridge connecting microphone inputs over WiFi/UDP network streams.",
-      "category": "iot",
-      "categoryLabel": "ESP32 & IoT",
-      "tags": ["Audio", "WiFi", "IoT", "Networking"]
     }
   }
 }

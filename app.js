@@ -89,6 +89,7 @@
     // Metrics elements
     DOM.metricTotal = document.getElementById("metric-total-repos");
     DOM.metricWebApps = document.getElementById("metric-web-apps");
+    DOM.metricNativeApps = document.getElementById("metric-native-apps");
     DOM.metricCad = document.getElementById("metric-cad-models");
     DOM.metricStars = document.getElementById("metric-total-stars");
   }
@@ -453,6 +454,10 @@
     // Category Filter
     if (state.activeCategory === "featured") {
       list = list.filter((r) => r.isFeatured);
+    } else if (state.activeCategory === "apps") {
+      list = list.filter((r) =>
+        r.downloads && r.downloads.some((d) => ["apk", "deb", "linux"].includes(d.type))
+      );
     } else if (state.activeCategory !== "all") {
       list = list.filter((r) => r.category === state.activeCategory);
     }
@@ -499,12 +504,16 @@
   function renderHeroMetrics() {
     const total = state.processedRepos.length;
     const webApps = state.processedRepos.filter((r) => r.liveUrl).length;
+    const nativeApps = state.processedRepos.filter((r) =>
+      r.downloads && r.downloads.some((d) => ["apk", "deb", "linux"].includes(d.type))
+    ).length;
     const cadModels = state.processedRepos.filter((r) => r.category === "3d-printing").length;
     let stars = 0;
     state.processedRepos.forEach((r) => (stars += r.stars));
 
     if (DOM.metricTotal) DOM.metricTotal.textContent = total;
     if (DOM.metricWebApps) DOM.metricWebApps.textContent = webApps;
+    if (DOM.metricNativeApps) DOM.metricNativeApps.textContent = nativeApps;
     if (DOM.metricCad) DOM.metricCad.textContent = cadModels;
     if (DOM.metricStars) DOM.metricStars.textContent = stars;
   }
@@ -515,6 +524,7 @@
     const categories = state.config?.categories || [
       { id: "all", label: "All Projects" },
       { id: "featured", label: "Featured" },
+      { id: "apps", label: "APKs & Apps" },
       { id: "web-apps", label: "Web Apps" },
       { id: "3d-printing", label: "3D Printing & CAD" },
       { id: "iot", label: "ESP32 & IoT" },
@@ -530,6 +540,10 @@
         count = state.processedRepos.length;
       } else if (cat.id === "featured") {
         count = state.processedRepos.filter((r) => r.isFeatured).length;
+      } else if (cat.id === "apps") {
+        count = state.processedRepos.filter((r) =>
+          r.downloads && r.downloads.some((d) => ["apk", "deb", "linux"].includes(d.type))
+        ).length;
       } else {
         count = state.processedRepos.filter((r) => r.category === cat.id).length;
       }
@@ -621,20 +635,35 @@
       `;
     }
 
-    // Direct Download button
+    // Render Direct Download buttons (APK, DEB, STL, Linux, etc.)
     if (repo.downloads && repo.downloads.length > 0) {
-      const primaryDl = repo.downloads[0];
-      const isCustomAsset = primaryDl.type === "stl" || primaryDl.type === "apk";
-      const dlIcon = isCustomAsset
-        ? `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>`
-        : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>`;
+      repo.downloads.forEach((dl) => {
+        let btnClass = "btn-download";
+        let iconSvg = "";
 
-      actionButtonsHTML += `
-        <a href="${escapeHTML(primaryDl.url)}" target="_blank" rel="noopener noreferrer" class="btn-action btn-download" title="${escapeHTML(primaryDl.label)}">
-          ${dlIcon}
-          <span>${escapeHTML(primaryDl.label)}</span>
-        </a>
-      `;
+        if (dl.type === "apk") {
+          btnClass += " btn-apk";
+          iconSvg = `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.411 13.854 8.136 12 8.136c-1.854 0-3.5902.275-5.1367.8137L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/></svg>`;
+        } else if (dl.type === "deb") {
+          btnClass += " btn-deb";
+          iconSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>`;
+        } else if (dl.type === "stl") {
+          btnClass += " btn-stl";
+          iconSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>`;
+        } else if (dl.type === "linux") {
+          btnClass += " btn-linux";
+          iconSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>`;
+        } else {
+          iconSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>`;
+        }
+
+        actionButtonsHTML += `
+          <a href="${escapeHTML(dl.url)}" target="_blank" rel="noopener noreferrer" class="btn-action ${btnClass}" title="${escapeHTML(dl.label)}">
+            ${iconSvg}
+            <span>${escapeHTML(dl.label)}</span>
+          </a>
+        `;
+      });
     }
 
     // GitHub Source Code link
@@ -644,6 +673,16 @@
         <span>Code</span>
       </a>
     `;
+
+    // Asset Badges for top row (APK, DEB, STL)
+    const hasApk = repo.downloads && repo.downloads.some((d) => d.type === "apk");
+    const hasDeb = repo.downloads && repo.downloads.some((d) => d.type === "deb");
+    const hasStl = repo.downloads && repo.downloads.some((d) => d.type === "stl");
+
+    let assetBadgesHTML = "";
+    if (hasApk) assetBadgesHTML += `<span class="card-asset-badge badge-apk" title="Direct Android APK Available">APK</span>`;
+    if (hasDeb) assetBadgesHTML += `<span class="card-asset-badge badge-deb" title="Direct Debian Package Available">DEB</span>`;
+    if (hasStl) assetBadgesHTML += `<span class="card-asset-badge badge-stl" title="3D Printable STL Available">STL</span>`;
 
     // Tags rendering
     const tagsHTML = repo.tags
@@ -655,9 +694,12 @@
       <article class="project-card ${isFeatured ? "featured-card" : ""}" data-id="${escapeHTML(repo.id)}">
         <div class="card-top">
           <div class="card-meta-row">
-            <span class="card-category-pill ${catClass}">
-              ${isFeatured ? "⭐ " : ""}${escapeHTML(repo.categoryLabel)}
-            </span>
+            <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
+              <span class="card-category-pill ${catClass}">
+                ${isFeatured ? "⭐ " : ""}${escapeHTML(repo.categoryLabel)}
+              </span>
+              ${assetBadgesHTML}
+            </div>
             <div class="card-stats">
               ${
                 repo.stars > 0

@@ -837,6 +837,58 @@ a {
   color: var(--text-primary);
 }
 
+/* Specialized APK Download Button */
+.btn-apk {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: var(--accent-emerald);
+}
+
+.btn-apk:hover {
+  background: rgba(16, 185, 129, 0.24);
+  border-color: rgba(16, 185, 129, 0.6);
+  color: #34d399;
+}
+
+/* Specialized DEB Download Button */
+.btn-deb {
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  color: #c084fc;
+}
+
+.btn-deb:hover {
+  background: rgba(168, 85, 247, 0.24);
+  border-color: rgba(168, 85, 247, 0.6);
+  color: #e9d5ff;
+}
+
+/* Specialized STL 3D Model Button */
+.btn-stl {
+  background: rgba(6, 182, 212, 0.12);
+  border: 1px solid rgba(6, 182, 212, 0.35);
+  color: var(--accent-cyan);
+}
+
+.btn-stl:hover {
+  background: rgba(6, 182, 212, 0.24);
+  border-color: rgba(6, 182, 212, 0.6);
+  color: #7dd3fc;
+}
+
+/* Specialized Linux Executable Button */
+.btn-linux {
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  color: var(--accent-amber);
+}
+
+.btn-linux:hover {
+  background: rgba(245, 158, 11, 0.24);
+  border-color: rgba(245, 158, 11, 0.6);
+  color: #fde047;
+}
+
 .btn-code {
   background: var(--btn-secondary-bg);
   border: 1px solid var(--btn-secondary-border);
@@ -848,6 +900,39 @@ a {
   background: var(--btn-secondary-hover-bg);
   border-color: var(--border-strong);
   color: var(--text-primary);
+}
+
+/* Card asset badges (APK, DEB, STL) in card top meta row */
+.card-asset-badge {
+  font-size: 0.66rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  line-height: 1.2;
+}
+
+.badge-apk {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #34d399;
+}
+
+.badge-deb {
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  color: #c084fc;
+}
+
+.badge-stl {
+  background: rgba(6, 182, 212, 0.15);
+  border: 1px solid rgba(6, 182, 212, 0.35);
+  color: #38bdf8;
 }
 
 /* Card Footer info */
