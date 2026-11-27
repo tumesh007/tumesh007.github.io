@@ -20,6 +20,7 @@
     "Bankers-Toolkit"
   ],
   "featured": [
+    "ckyc-image-merger",
     "phone-wall-clock-enclosure-generator",
     "BankersToolkit",
     "guava-home",
@@ -35,6 +36,21 @@
     { "id": "android-tools", "label": "Android & Tools", "icon": "tool" }
   ],
   "repoOverrides": {
+    "ckyc-image-merger": {
+      "title": "CKYC Image Merger",
+      "description": "100% offline banking KYC utility to capture Photo & Signature and ID Proof / OVD, rotate, drag-to-crop, mask Aadhaar first 8 digits, enhance document clarity, and export < 500 KB JPGs. Available as Web PWA and Android APK.",
+      "category": "web-apps",
+      "categoryLabel": "Web App & Android APK",
+      "tags": ["JavaScript", "Capacitor", "Android", "PWA", "Banking"],
+      "homepage": "https://tumesh007.github.io/ckyc-image-merger/",
+      "downloads": [
+        {
+          "label": "Download APK (v1.0)",
+          "url": "https://github.com/tumesh007/ckyc-image-merger/releases/download/v1.0.0/CKYC-Merger-v1.0.0-debug.apk",
+          "type": "apk"
+        }
+      ]
+    },
     "phone-wall-clock-enclosure-generator": {
       "title": "Phone Wall Clock Enclosure Generator",
       "description": "Parametric OpenSCAD enclosure generator that upcycles old Android smartphones into wall-mounted digital clocks with hidden wire routing and snap-fit bezel clips.",
